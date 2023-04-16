@@ -20,7 +20,8 @@ async def show_mint_dashboard(q: Q):
         )
     ])
     q.page['header'] = ui.header_card(box='header', title='H2O Wave Demo', subtitle='Mint Dashboard',
-                                      nav=global_nav)
+                                      items=[ui.tabs(name='Dashboards', value='#dashboards/mint', 
+                                                     items=global_nav),])
     q.page['main_section'] = ui.section_card(
         box='main_section',
         title=next(sample_title),

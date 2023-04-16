@@ -23,7 +23,8 @@ async def show_orange_dashboard(q: Q):
     ])
 
     q.page['header'] = ui.header_card(box='header', title='H2O Wave Demo', subtitle='Orange Dashboard',
-                                      nav=global_nav)
+                                      items=[ui.tabs(name='Dashboards', value='#dashboards/orange', 
+                                                     items=global_nav),])
 
     q.page['section'] = ui.section_card(
         box='control',

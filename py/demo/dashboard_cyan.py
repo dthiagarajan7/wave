@@ -27,7 +27,8 @@ async def show_cyan_dashboard(q: Q):
     ])
 
     q.page['header'] = ui.header_card(box='header', title='H2O Wave Demo', subtitle='Cyan Dashboard',
-                                      nav=global_nav)
+                                      items=[ui.tabs(name='Dashboards', value='#dashboards/cyan', 
+                                                     items=global_nav),])
     q.page['section'] = ui.section_card(
         box=ui.box('top', order=1, size=0),
         title=next(sample_title),
